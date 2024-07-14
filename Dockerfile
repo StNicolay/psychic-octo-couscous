@@ -8,7 +8,7 @@ FROM bellsoft/liberica-openjdk-alpine as prod
 LABEL authors="stnicolay"
 WORKDIR /app
 
-COPY --from=builder /opt/app/target/*.jar /opt/app/app.jar
+COPY --from=builder /opt/app/target/*.jar ./app.jar
 
 EXPOSE 8080
 
